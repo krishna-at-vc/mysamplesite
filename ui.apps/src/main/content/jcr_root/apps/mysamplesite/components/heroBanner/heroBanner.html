@@ -1,24 +1,28 @@
-<sly data-sly-use.model="com.mysamplesite.core.models.HeroBannerModel"
-    data-sly-use.templates="core/wcm/components/commons/v1/templates.html" data-sly-test.hasContent="${!model.empty}">
+<sly data-sly-use.model="com.mysamplesite.core.models.HeroBannerModel">
+    <div class="cmp-hero-banner" data-sly-test="${model.hasContent}">
+        <div class="cmp-hero-banner__background" data-sly-test="${model.backgroundImage}">
+            <img src="${model.backgroundImage}" alt="${model.title}" class="cmp-hero-banner__background-image" />
+        </div>
 
-    <div class="cmp-hero-banner" style="background-image: url(${model.backgroundImage @ context='uri'})">
         <div class="cmp-hero-banner__content">
             <div class="cmp-hero-banner__logo" data-sly-test="${model.logoImage}">
-                <img src="${model.logoImage @ context='uri'}" alt="Logo" />
+                <img src="${model.logoImage}" alt="Logo" class="cmp-hero-banner__logo-image" />
             </div>
+
             <div class="cmp-hero-banner__text-content">
                 <h1 class="cmp-hero-banner__title" data-sly-test="${model.title}">${model.title}</h1>
                 <p class="cmp-hero-banner__subtitle" data-sly-test="${model.subtitle}">${model.subtitle}</p>
-                <div class="cmp-hero-banner__cta-group" data-sly-test="${model.ctaButtons}">
+
+                <div class="cmp-hero-banner__cta-container" data-sly-test="${model.ctaButtons}">
                     <sly data-sly-list="${model.ctaButtons}">
-                        <a class="cmp-hero-banner__cta-button" href="${item.link @ context='uri'}">${item.text}</a>
+                        <a href="${item.link}" class="cmp-hero-banner__cta-button">${item.text}</a>
                     </sly>
                 </div>
             </div>
+
             <div class="cmp-hero-banner__product" data-sly-test="${model.productImage}">
-                <img src="${model.productImage @ context='uri'}" alt="Product" />
+                <img src="${model.productImage}" alt="Product" class="cmp-hero-banner__product-image" />
             </div>
         </div>
     </div>
 </sly>
-<sly data-sly-call="${templates.placeholder @ isEmpty=model.empty}"></sly>
