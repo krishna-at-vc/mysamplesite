@@ -1,0 +1,13 @@
+<div class="city-retail-hero" data-sly-use.model="com.mysamplesite.core.models.CityRetailHeroComponent">
+    <div class="city-retail-hero__content">
+        <div class="city-retail-hero__category">${model.category}</div>
+        <h1 class="city-retail-hero__title">${model.title}</h1>
+        <p class="city-retail-hero__description">${model.description}</p>
+        <a href="${model.ctaLink}" class="city-retail-hero__cta">
+            ${model.ctaLabel}
+        </a>
+    </div>
+    <div class="city-retail-hero__image">
+        <img src="${model.image}" alt="${model.imageAlt}" />
+    </div>
+</div>

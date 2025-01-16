@@ -1,0 +1,4 @@
+{
+    "java.compile.nullAnalysis.mode": "disabled",
+    "aemsync.server": "http://localhost:7502"
+}
