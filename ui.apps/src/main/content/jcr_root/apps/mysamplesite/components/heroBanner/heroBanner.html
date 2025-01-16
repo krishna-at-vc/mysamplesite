@@ -1,0 +1,25 @@
+<sly data-sly-use.model="com.mysamplesite.core.models.HeroBannerModel"
+    data-sly-use.templates="core/wcm/components/commons/v1/templates.html" data-sly-test.hasContent="${!model.empty}">
+
+    <div class="cmp-hero-banner"
+        style="${'background-image: url(' + model.backgroundImage + ')' @ context='styleString'}">
+        <div class="cmp-hero-banner__content">
+            <div class="cmp-hero-banner__logo" data-sly-test="${model.logoImage}">
+                <img src="${model.logoImage}" alt="Logo" />
+            </div>
+            <div class="cmp-hero-banner__text-content">
+                <h1 class="cmp-hero-banner__title" data-sly-test="${model.title}">${model.title}</h1>
+                <p class="cmp-hero-banner__subtitle" data-sly-test="${model.subtitle}">${model.subtitle}</p>
+                <div class="cmp-hero-banner__cta-group" data-sly-test="${model.ctaButtons}">
+                    <sly data-sly-list="${model.ctaButtons}">
+                        <a class="cmp-hero-banner__cta-button" href="${item.link}">${item.text}</a>
+                    </sly>
+                </div>
+            </div>
+            <div class="cmp-hero-banner__product" data-sly-test="${model.productImage}">
+                <img src="${model.productImage}" alt="Product" />
+            </div>
+        </div>
+    </div>
+</sly>
+<sly data-sly-call="${templates.placeholder @ isEmpty=model.empty}"></sly>
