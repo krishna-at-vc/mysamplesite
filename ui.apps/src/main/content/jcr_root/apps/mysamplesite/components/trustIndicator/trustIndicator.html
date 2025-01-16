@@ -1,0 +1,18 @@
+<sly data-sly-use.model="com.mysamplesite.core.models.TrustIndicatorModel"
+    data-sly-use.templates="core/wcm/components/commons/v1/templates.html" data-sly-test.hasContent="${!model.empty}">
+
+    <div class="cmp-trust-indicator">
+        <div class="cmp-trust-indicator__content">
+            <div class="cmp-trust-indicator__count" data-sly-test="${model.customerCount}">
+                ${model.customerCount}
+            </div>
+            <div class="cmp-trust-indicator__message" data-sly-test="${model.trustMessage}">
+                ${model.trustMessage}
+            </div>
+            <div class="cmp-trust-indicator__disclaimer" data-sly-test="${model.disclaimerText}">
+                *${model.disclaimerText}
+            </div>
+        </div>
+    </div>
+</sly>
+<sly data-sly-call="${templates.placeholder @ isEmpty=model.empty}"></sly>

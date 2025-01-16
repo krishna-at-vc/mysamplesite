@@ -1,0 +1,166 @@
+{
+    "components": [
+        {
+            "sectionId": "Section 1",
+            "componentName": "HeroBanner",
+            "authorableFields": {
+                "backgroundImage": "Image",
+                "productImage": "Image",
+                "title": "Text",
+                "subtitle": "Text",
+                "ctaButtons": [
+                    "Link"
+                ],
+                "logoImage": "Image"
+            },
+            "uiDescription": "A full-width hero banner showcasing the Pulsar N125 motorcycle with dynamic imagery, product visuals, and call-to-action buttons",
+            "businessRequirements": "High-impact visual presentation, responsive design, support for multiple CTA buttons, optimized image loading",
+            "componentType": "Custom Component"
+        },
+        {
+            "sectionId": "Section 2",
+            "componentName": "TrustIndicator",
+            "authorableFields": {
+                "customerCount": "Text",
+                "trustMessage": "Text",
+                "disclaimerText": "Text"
+            },
+            "uiDescription": "A trust indicator strip showing customer statistics with disclaimer",
+            "businessRequirements": "Dynamic number counter, responsive text layout, disclaimer support, dynamic number counter will come from an API integration",
+            "componentType": "Core Component (Text) with custom styling"
+        },
+        {
+            "sectionId": "Section 3",
+            "componentName": "ProductCategoryCarousel",
+            "authorableFields": {
+                "title": "Text",
+                "categories": [
+                    {
+                        "image": "Image",
+                        "title": "Text",
+                        "description": "Text",
+                        "ctaButton": "Link"
+                    }
+                ]
+            },
+            "uiDescription": "Horizontal scrollable carousel showing different vehicle categories with images and CTAs",
+            "businessRequirements": "Touch-friendly carousel navigation, responsive images, dynamic category loading",
+            "componentType": "Custom Component based on Core Carousel"
+        },
+        {
+            "sectionId": "Section 4",
+            "componentName": "FinanceOfferTeaser",
+            "authorableFields": {
+                "title": "Text",
+                "backgroundImage": "Image",
+                "offerPoints": [
+                    "Text"
+                ],
+                "ctaButton": "Link"
+            },
+            "uiDescription": "Finance offer section with key points and CTA button on a branded background",
+            "businessRequirements": "Easy offer point management, clear CTA visibility, responsive layout",
+            "componentType": "Core Component (Teaser) with custom styling"
+        },
+        {
+            "sectionId": "Section 5",
+            "componentName": "FeaturedProductSlider",
+            "authorableFields": {
+                "title": "Text",
+                "products": [
+                    {
+                        "image": "Image",
+                        "name": "Text",
+                        "price": "Text",
+                        "ctaButton": "Link"
+                    }
+                ]
+            },
+            "uiDescription": "Carousel slider showcasing featured products with pricing and CTA",
+            "businessRequirements": "Smooth sliding animation, price formatting, responsive product cards",
+            "componentType": "Custom Component"
+        },
+        {
+            "sectionId": "Section 6",
+            "componentName": "NewsMediaCarousel",
+            "authorableFields": {
+                "title": "Text",
+                "newsItems": [
+                    {
+                        "thumbnail": "Image",
+                        "headline": "Text",
+                        "date": "Date",
+                        "link": "Link"
+                    }
+                ]
+            },
+            "uiDescription": "News and media carousel with article previews",
+            "businessRequirements": "Auto-scrolling capability, date formatting, link tracking",
+            "componentType": "Custom Component"
+        },
+        {
+            "sectionId": "Section 7",
+            "componentName": "CompanyInfoTabs",
+            "authorableFields": {
+                "tabs": [
+                    {
+                        "title": "Text",
+                        "image": "Image",
+                        "content": "RichText",
+                        "ctaLink": "Link"
+                    }
+                ]
+            },
+            "uiDescription": "Tabbed interface showing company information with images and text",
+            "businessRequirements": "Tab navigation, rich text support, responsive tab handling",
+            "componentType": "Core Component (Tabs) with custom styling"
+        },
+        {
+            "sectionId": "Section 8",
+            "componentName": "ContactStrip",
+            "authorableFields": {
+                "phoneNumber": "Text",
+                "email": "Text",
+                "socialLinks": [
+                    "Link"
+                ]
+            },
+            "uiDescription": "Contact information strip with social media links",
+            "businessRequirements": "Click-to-call/email functionality, social media icon support",
+            "componentType": "Core Component (Text) with custom styling"
+        },
+        {
+            "sectionId": "Section 9",
+            "componentName": "FooterNavigation",
+            "authorableFields": {
+                "columns": [
+                    {
+                        "title": "Text",
+                        "links": [
+                            {
+                                "text": "Text",
+                                "url": "Link"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "uiDescription": "Multi-column footer navigation with grouped links",
+            "businessRequirements": "Responsive column layout, link grouping, navigation tracking",
+            "componentType": "Core Component (Navigation) with custom styling"
+        },
+        {
+            "sectionId": "Section 10",
+            "componentName": "FooterCopyright",
+            "authorableFields": {
+                "copyrightText": "Text",
+                "additionalLinks": [
+                    "Link"
+                ]
+            },
+            "uiDescription": "Copyright information and additional footer links",
+            "businessRequirements": "Dynamic year update, link management",
+            "componentType": "Core Component (Text) with custom styling"
+        }
+    ]
+}
