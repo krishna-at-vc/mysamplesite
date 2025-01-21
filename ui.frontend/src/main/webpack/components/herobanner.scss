@@ -1,0 +1,157 @@
+// Variables
+$hero-banner-height: 100vh;
+$hero-banner-min-height: 600px;
+$content-max-width: 1440px;
+$text-content-max-width: 600px;
+$spacing-base: 1rem;
+$spacing-large: 2rem;
+
+// Colors
+$color-white: #ffffff;
+$color-primary: #ff4d4d;
+$color-primary-hover: #ff3333;
+$color-shadow: rgba(0, 0, 0, 0.2);
+
+// Breakpoints
+$breakpoint-desktop: 1024px;
+$breakpoint-tablet: 768px;
+
+.cmp-hero-banner {
+    position: relative;
+    width: 100%;
+    height: $hero-banner-height;
+    min-height: $hero-banner-min-height;
+    overflow: hidden;
+
+    &__background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+
+        &-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__content {
+        position: relative;
+        z-index: 2;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: $spacing-large;
+        max-width: $content-max-width;
+        margin: 0 auto;
+    }
+
+    &__logo {
+        position: absolute;
+        top: $spacing-large;
+        left: $spacing-large;
+        max-width: 150px;
+
+        &-image {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__text-content {
+        max-width: $text-content-max-width;
+        color: $color-white;
+        text-shadow: 0 2px 4px $color-shadow;
+    }
+
+    &__title {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: $spacing-base;
+        line-height: 1.2;
+    }
+
+    &__subtitle {
+        font-size: 1.5rem;
+        margin-bottom: $spacing-large;
+        line-height: 1.5;
+    }
+
+    &__cta-container {
+        display: flex;
+        gap: $spacing-base;
+        flex-wrap: wrap;
+    }
+
+    &__cta-button {
+        display: inline-block;
+        padding: $spacing-base $spacing-large;
+        background-color: $color-primary;
+        color: $color-white;
+        text-decoration: none;
+        border-radius: 4px;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: $color-primary-hover;
+        }
+    }
+
+    &__product {
+        position: absolute;
+        right: $spacing-large;
+        bottom: 0;
+        max-width: 50%;
+        max-height: 80%;
+
+        &-image {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+
+    // Responsive Design
+    @media (max-width: $breakpoint-desktop) {
+        height: auto;
+        min-height: 500px;
+
+        &__title {
+            font-size: 2.5rem;
+        }
+
+        &__subtitle {
+            font-size: 1.25rem;
+        }
+
+        &__product {
+            position: relative;
+            right: auto;
+            bottom: auto;
+            max-width: 100%;
+            margin-top: $spacing-large;
+        }
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+        &__content {
+            padding: $spacing-base;
+        }
+
+        &__title {
+            font-size: 2rem;
+        }
+
+        &__logo {
+            top: $spacing-base;
+            left: $spacing-base;
+            max-width: 100px;
+        }
+    }
+} 

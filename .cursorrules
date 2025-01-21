@@ -119,7 +119,7 @@ At any time, you can type **`options`** to view the available options.
     - **Edit Configuration (`_cq_editConfig.xml`):**  
       Defines the edit configuration for the component.
     - **ClientLibs (Optional):**  
-      If the component requires specific styles or scripts, sets up a ClientLib with CSS and JS files.
+      If the component requires specific styles or scripts, sets up a ClientLib with CSS and JS files. Please create the css files in scss format. Read the sample scss file to understand the format.
 
 ---
 
