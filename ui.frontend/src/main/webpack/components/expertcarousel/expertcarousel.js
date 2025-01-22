@@ -56,12 +56,20 @@
         }
 
         handleTouchStart(e) {
-            this.touchStartX = e.touches[0].clientX;
+            try {
+                this.touchStartX = e.touches[0].clientX;
+            } catch (error) {
+                console.warn('Error handling touch start:', error);
+            }
         }
 
         handleTouchEnd(e) {
-            this.touchEndX = e.changedTouches[0].clientX;
-            this.handleSwipe();
+            try {
+                this.touchEndX = e.changedTouches[0].clientX;
+                this.handleSwipe();
+            } catch (error) {
+                console.warn('Error handling touch end:', error);
+            }
         }
 
         handleSwipe() {
@@ -193,7 +201,9 @@
             if (!this.slides.length) return;
             
             const slideWidth = this.slides[0].offsetWidth;
-            const gap = parseInt(window.getComputedStyle(this.wrapper).gap) || 0;
+            const computedGap = window.getComputedStyle(this.wrapper).gap;
+            // Parse gap value safely, handling 'normal' and other non-pixel values
+            const gap = computedGap === 'normal' ? 0 : parseInt(computedGap) || 0;
             const offset = -(slideWidth + gap) * this.currentIndex;
             this.wrapper.style.transform = `translateX(${offset}px)`;
             this.updateButtonsState();
@@ -213,6 +223,12 @@
         }
     }
 
+    // Export the class for potential reuse
+    if (typeof module !== 'undefined' && module.exports) {
+        module.exports = ExpertCarousel;
+    }
+
+    // Initialize on DOM ready
     function onDocumentReady() {
         try {
             const carousels = document.querySelectorAll('.cmp-expert-carousel');

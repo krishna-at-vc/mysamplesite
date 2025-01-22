@@ -6,6 +6,10 @@ $spacing-base: 1rem;
 $spacing-large: 2rem;
 $border-radius: 8px;
 
+// Breakpoint variables
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
 // Add breakpoint mixins
 @mixin desktop {
     @media (min-width: #{$breakpoint-desktop + 1}) {
@@ -23,6 +27,11 @@ $border-radius: 8px;
     @media (max-width: #{$breakpoint-tablet}) {
         @content;
     }
+}
+
+// Add function for color manipulation
+@function darken($color, $amount) {
+    @return mix(black, $color, $amount);
 }
 
 .cmp-expert-carousel {
