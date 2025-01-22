@@ -1,0 +1,67 @@
+<div class="cmp-expert-carousel" 
+     data-cmp-is="expertCarousel"
+     role="region" 
+     aria-label="${properties.heading || 'Our Leasing Experts'}">
+    
+    <div class="cmp-expert-carousel__header">
+        <h2 class="cmp-expert-carousel__heading" id="carouselHeading">${properties.heading}</h2>
+        <div class="cmp-expert-carousel__description" id="carouselDescription">${properties.description}</div>
+    </div>
+    
+    <div class="cmp-expert-carousel__container" 
+         role="group" 
+         aria-labelledby="carouselHeading"
+         aria-describedby="carouselDescription">
+        <div class="cmp-expert-carousel__wrapper"
+             role="list">
+            <sly data-sly-list.expert="${properties.experts}">
+                <div class="cmp-expert-carousel__slide" 
+                     role="listitem"
+                     aria-label="Expert ${expertList.count} of ${properties.experts.size}">
+                    <div class="cmp-expert-carousel__expert-card">
+                        <div class="cmp-expert-carousel__image">
+                            <img src="${expert.image @ context='uri'}" 
+                                 alt="${expert.name @ context='text'} - ${expert.title @ context='text'}"
+                                 loading="lazy" />
+                        </div>
+                        <div class="cmp-expert-carousel__content">
+                            <h3 class="cmp-expert-carousel__name">${expert.name @ context='text'}</h3>
+                            <p class="cmp-expert-carousel__title">${expert.title @ context='text'}</p>
+                            <div class="cmp-expert-carousel__contact">
+                                <a href="tel:${expert.phone @ context='uri'}" 
+                                   class="cmp-expert-carousel__phone"
+                                   aria-label="Call ${expert.name @ context='text'} at ${expert.phone @ context='text'}">
+                                    <span class="cmp-expert-carousel__phone-icon" aria-hidden="true"></span>
+                                    ${expert.phone @ context='text'}
+                                </a>
+                                <a href="mailto:${expert.email @ context='uri'}" 
+                                   class="cmp-expert-carousel__email"
+                                   aria-label="Email ${expert.name @ context='text'} at ${expert.email @ context='text'}">
+                                    <span class="cmp-expert-carousel__email-icon" aria-hidden="true"></span>
+                                    ${expert.email @ context='text'}
+                                </a>
+                            </div>
+                            <a href="#" 
+                               class="cmp-expert-carousel__view-profile"
+                               aria-label="View ${expert.name @ context='text'}'s full profile">
+                                View profile
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </sly>
+        </div>
+        <button class="cmp-expert-carousel__button cmp-expert-carousel__button--prev" 
+                aria-label="Previous slide"
+                aria-controls="carouselWrapper"
+                aria-disabled="true">
+            <span class="cmp-expert-carousel__button-icon" aria-hidden="true"></span>
+        </button>
+        <button class="cmp-expert-carousel__button cmp-expert-carousel__button--next" 
+                aria-label="Next slide"
+                aria-controls="carouselWrapper"
+                aria-disabled="false">
+            <span class="cmp-expert-carousel__button-icon" aria-hidden="true"></span>
+        </button>
+    </div>
+</div> 
