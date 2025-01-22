@@ -1,0 +1,91 @@
+<sly data-sly-use.model="com.mysamplesite.core.models.PropertyCarousel"
+     data-sly-use.template="core/wcm/components/commons/v1/templates.html"/>
+
+<div class="cmp-property-carousel"
+     data-cmp-is="propertyCarousel"
+     role="region"
+     aria-label="${model.heading}">
+    
+    <div class="cmp-property-carousel__header">
+        <h2 class="cmp-property-carousel__heading" id="carouselHeading">${model.heading}</h2>
+        <div class="cmp-property-carousel__description" id="carouselDescription"
+             data-sly-test="${model.description}">${model.description @ context='html'}</div>
+    </div>
+
+    <div class="cmp-property-carousel__container"
+         role="group"
+         aria-labelledby="carouselHeading"
+         aria-describedby="carouselDescription">
+        
+        <div class="cmp-property-carousel__wrapper" role="list">
+            <sly data-sly-list.property="${model.properties}">
+                <div class="cmp-property-carousel__slide"
+                     role="listitem"
+                     aria-label="Property ${propertyList.count} of ${model.properties.size}">
+                    <div class="cmp-property-carousel__property-card">
+                        <div class="cmp-property-carousel__image">
+                            <img src="${property.image @ context='uri'}"
+                                 alt="${property.propertyName} - ${property.propertyLocation}"
+                                 loading="lazy"/>
+                        </div>
+                        <div class="cmp-property-carousel__content">
+                            <div class="cmp-property-carousel__tags" data-sly-test="${property.propertyTags}">
+                                <sly data-sly-list.tag="${property.propertyTags}">
+                                    <span class="cmp-property-carousel__tag">${tag}</span>
+                                </sly>
+                            </div>
+                            <h3 class="cmp-property-carousel__property-name">${property.propertyName}</h3>
+                            <p class="cmp-property-carousel__location">${property.propertyLocation}</p>
+                            <div class="cmp-property-carousel__actions">
+                                <a href="${property.enquireLink @ context='uri'}"
+                                   class="cmp-property-carousel__enquire-link"
+                                   aria-label="Enquire about ${property.propertyName}">
+                                    Enquire
+                                </a>
+                                <a href="${property.viewLink @ context='uri'}"
+                                   class="cmp-property-carousel__view-link"
+                                   aria-label="View details of ${property.propertyName}">
+                                    View
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </sly>
+        </div>
+
+        <button class="cmp-property-carousel__button cmp-property-carousel__button--prev"
+                aria-label="Previous slide"
+                aria-controls="carouselWrapper"
+                aria-disabled="true">
+            <span class="cmp-property-carousel__button-icon" aria-hidden="true"></span>
+        </button>
+        <button class="cmp-property-carousel__button cmp-property-carousel__button--next"
+                aria-label="Next slide"
+                aria-controls="carouselWrapper"
+                aria-disabled="false">
+            <span class="cmp-property-carousel__button-icon" aria-hidden="true"></span>
+        </button>
+
+        <div class="cmp-property-carousel__navigation">
+            <sly data-sly-list.dot="${model.properties}">
+                <button class="cmp-property-carousel__nav-button"
+                        aria-label="Go to slide ${dotList.count}"
+                        aria-selected="${dotList.first ? 'true' : 'false'}">
+                    <span class="cmp-property-carousel__nav-dot"></span>
+                </button>
+            </sly>
+        </div>
+    </div>
+
+    <sly data-sly-test="${model.ctaButtonText && model.ctaButtonLink}">
+        <div class="cmp-property-carousel__cta">
+            <a href="${model.ctaButtonLink @ context='uri'}"
+               class="cmp-property-carousel__cta-button">
+                ${model.ctaButtonText}
+            </a>
+        </div>
+    </sly>
+</div>
+
+<sly data-sly-call="${template.placeholder @ isEmpty=!model.properties, classAppend='cmp-property-carousel'}"></sly> 
