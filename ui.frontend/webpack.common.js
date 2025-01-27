@@ -13,7 +13,11 @@ const resolve = {
     extensions: ['.js', '.ts'],
     plugins: [new TSConfigPathsPlugin({
         configFile: './tsconfig.json'
-    })]
+    })],
+    modules: [
+        'node_modules',
+        path.resolve(__dirname, 'src/main/webpack')
+    ]
 };
 
 module.exports = {
@@ -74,6 +78,13 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader'
+                }
             }
         ]
     },
