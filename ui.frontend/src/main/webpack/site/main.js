@@ -1,1 +1,1 @@
-import '../components/expertcarousel/expertcarousel.js'; 
+import '../components/**/*.js';

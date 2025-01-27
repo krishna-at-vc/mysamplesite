@@ -1,0 +1,90 @@
+.exper-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    &-container {
+        position: relative;
+        width: 100%;
+    }
+
+    &-slide {
+        display: none;
+        width: 100%;
+        transition: opacity 0.5s ease-in-out;
+
+        &.active {
+            display: block;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+
+    &-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+        z-index: 2;
+    }
+
+    &-prev,
+    &-next {
+        background: rgba(255, 255, 255, 0.8);
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.3s ease;
+
+        &:hover {
+            background: rgba(255, 255, 255, 1);
+        }
+    }
+
+    &-indicators {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+        z-index: 2;
+    }
+
+    &-indicator {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        transition: background 0.3s ease;
+
+        &.active {
+            background: rgba(255, 255, 255, 1);
+        }
+    }
+
+    @media (max-width: 768px) {
+        &-nav {
+            padding: 0 10px;
+        }
+
+        &-prev,
+        &-next {
+            width: 30px;
+            height: 30px;
+        }
+    }
+} 
