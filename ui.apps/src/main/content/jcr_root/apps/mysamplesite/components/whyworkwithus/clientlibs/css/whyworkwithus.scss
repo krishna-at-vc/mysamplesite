@@ -1,0 +1,72 @@
+.cmp-why-work-with-us {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+    &__header {
+        margin-bottom: 3rem;
+    }
+    
+    &__heading {
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin: 0;
+        
+        &-emphasis {
+            font-style: italic;
+            color: #000;
+        }
+    }
+    
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+    }
+    
+    &__reasons {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    &__reason {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-size: 1.125rem;
+        color: #333;
+        
+        &-marker {
+            width: 4px;
+            height: 24px;
+            background-color: #ccc;
+            border-radius: 2px;
+        }
+        
+        &--highlighted {
+            .cmp-why-work-with-us__reason-marker {
+                background-color: #ff0000;
+            }
+            
+            .cmp-why-work-with-us__reason-text {
+                color: #ff0000;
+            }
+        }
+    }
+    
+    &__description {
+        font-size: 1.125rem;
+        line-height: 1.6;
+        color: #444;
+        
+        p {
+            margin: 0;
+        }
+    }
+} 

@@ -1,0 +1,34 @@
+<sly data-sly-use.model="com.mysamplesite.core.models.PropertyDetails"/>
+<div class="cmp-property-details"
+     data-cmp-is="propertyDetails">
+    <div class="cmp-property-details__grid">
+        <div class="cmp-property-details__item">
+            <span class="cmp-property-details__label">Asset type</span>
+            <span class="cmp-property-details__value">${model.assetType}</span>
+        </div>
+        <div class="cmp-property-details__item">
+            <span class="cmp-property-details__label">Year built</span>
+            <span class="cmp-property-details__value">${model.yearBuilt}</span>
+        </div>
+        <div class="cmp-property-details__item">
+            <span class="cmp-property-details__label">Asset location</span>
+            <span class="cmp-property-details__value">${model.assetLocation}</span>
+        </div>
+        <div class="cmp-property-details__item">
+            <span class="cmp-property-details__label">Site area (hectares)</span>
+            <span class="cmp-property-details__value">${model.siteArea}</span>
+        </div>
+        <div class="cmp-property-details__item">
+            <span class="cmp-property-details__label">Lettable area (1000sqm)</span>
+            <span class="cmp-property-details__value">${model.lettableArea}</span>
+        </div>
+        <div class="cmp-property-details__item">
+            <span class="cmp-property-details__label">Lettable area adjusted for ownership (1000sqm)</span>
+            <span class="cmp-property-details__value">${model.adjustedLettableArea}</span>
+        </div>
+        <div class="cmp-property-details__item">
+            <span class="cmp-property-details__label">Typical floor area (sqm)</span>
+            <span class="cmp-property-details__value">${model.typicalFloorArea}</span>
+        </div>
+    </div>
+</div> 

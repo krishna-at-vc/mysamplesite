@@ -1,0 +1,25 @@
+<sly data-sly-use.model="com.mysamplesite.core.models.WhyWorkWithUs"/>
+<div class="cmp-why-work-with-us"
+     data-cmp-is="whyWorkWithUs">
+    
+    <div class="cmp-why-work-with-us__header">
+        <h2 class="cmp-why-work-with-us__heading">
+            <em class="cmp-why-work-with-us__heading-emphasis">Why</em> ${model.heading}
+        </h2>
+    </div>
+    
+    <div class="cmp-why-work-with-us__content">
+        <div class="cmp-why-work-with-us__reasons">
+            <sly data-sly-list.reason="${model.reasons}">
+                <div class="cmp-why-work-with-us__reason ${reason.isHighlighted ? 'cmp-why-work-with-us__reason--highlighted' : ''}">
+                    <span class="cmp-why-work-with-us__reason-marker"></span>
+                    <span class="cmp-why-work-with-us__reason-text">${reason.title}</span>
+                </div>
+            </sly>
+        </div>
+        
+        <div class="cmp-why-work-with-us__description">
+            <p>${model.description @ context='html'}</p>
+        </div>
+    </div>
+</div> 
