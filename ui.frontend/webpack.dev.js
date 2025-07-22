@@ -5,6 +5,42 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const SOURCE_ROOT = __dirname + '/src/main/webpack';
 
+function getStaticClientlibConfigs() {
+  const commonProps = {
+    watch: true
+  };
+
+  const clientlibPaths = [
+    {
+      name: 'clientlib-base',
+      publicPath: '/clientlib-base'
+    },
+    {
+      name: 'clientlib-dependencies',
+      publicPath: '/clientlib-dependencies'
+    }
+  ];
+
+  return clientlibPaths.map(lib => ({
+    ...commonProps,
+    directory: path.resolve(
+      __dirname,
+      '..',
+      'ui.apps',
+      'src',
+      'main',
+      'content',
+      'jcr_root',
+      'apps',
+      'mysamplesite',
+      'clientlibs',
+      lib.name
+    ),
+    publicPath: lib.publicPath
+  }));
+}
+
+
 module.exports = env => {
 
     const writeToDisk = env && Boolean(env.writeToDisk);
@@ -22,10 +58,6 @@ module.exports = env => {
             })
         ],
         devServer: {
-            proxy: [{
-                context: ['/content', '/etc.clientlibs'],
-                target: 'http://localhost:4502',
-            }],
             client: {
                 overlay: {
                     errors: true,
@@ -36,7 +68,8 @@ module.exports = env => {
             hot: false,
             devMiddleware: {
                 writeToDisk: writeToDisk
-            }
+            },
+            static: getStaticClientlibConfigs()
         }
     });
 }

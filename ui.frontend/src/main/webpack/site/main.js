@@ -6,7 +6,7 @@ import './main.scss';
 try {
     const componentContext = require.context(
         // Starting from site folder, go up one level and into components
-        '../../components',
+        '../components',
         // Search subdirectories
         true,
         // Only include JavaScript files
