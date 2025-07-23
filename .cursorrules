@@ -8,7 +8,7 @@ At any time, you can type **`options`** to view the available options.
 
 ### **Option 0: Context Setup**
 - **Description:**  
-  Scan the complete codebase and use the input/project-information-context.md file to setup the context for the project.  You will be required these information to generate the code at the proper location.
+  Scan the complete codebase and use the context/project-information-context.md file to setup the context for the project.  You will be required these information to generate the code at the proper location.
 
 ### **Option 1: Identify Components**
 - **Description:**  
@@ -17,6 +17,10 @@ At any time, you can type **`options`** to view the available options.
 ### **Option 2: Develop Components**
 - **Description:**  
   Generate AEM component code based on previously identified components. This includes selecting the business logic language (JavaScript or Java) and creating the necessary code files.
+
+### **Option 3: Prepare StyleGuide**
+- **Description:**  
+  Analyze a provided image of a web page to extract design tokens (such as colors, typography, spacing, etc.) and generate a style guide. The style guide should be implemented using the project's mysamplesite/ui.frontend/src/main/webpack/site structure and placed in the appropriate folder.
 
 ---
 
@@ -120,6 +124,42 @@ At any time, you can type **`options`** to view the available options.
       Defines the edit configuration for the component.
     - **ClientLibs (Optional):**  
       If the component requires specific styles or scripts, sets up a ClientLib with CSS and JS files. Please create the css files in scss format. Read the sample scss file to understand the format.
+
+---
+
+### **Option 3: Prepare StyleGuide**
+
+#### **Step 3.1: Provide the Image**
+
+- **Instruction:**  
+  Share the image of the web page or design from which the style guide should be prepared.
+
+- **Example:**  
+  Please upload or provide a link to the image.
+
+#### **Step 3.2: Analyze the Image**
+
+- **Process:**
+  1. **Extract Design Tokens:**  
+     Identify and extract key design tokens such as colors, typography (fonts, sizes, weights), spacing (margins, paddings), and other reusable style elements from the image.
+  2. **Document Tokens:**  
+     Organize the extracted tokens into categories (e.g., color palette, font styles, spacing scale).
+
+#### **Step 3.3: Generate Style Guide Files**
+
+- **Instruction:**  
+  Create SCSS (or CSS) files for the style guide, following the project's folder structure. Place these files in the appropriate style guide or design system folder (e.g., `ui/styles/styleguide/` or similar as per project conventions).
+
+- **Example Output:**
+  - `_colors.scss` for color variables
+  - `_typography.scss` for font styles
+  - `_spacing.scss` for spacing scale
+  - `README.md` or documentation file describing the usage of the style guide
+
+#### **Step 3.4: Save and Reference**
+
+- **Instruction:**  
+  Ensure the style guide files are saved in the correct folder and referenced in the main SCSS/CSS entry point if required.
 
 ---
 
