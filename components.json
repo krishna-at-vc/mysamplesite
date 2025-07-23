@@ -1,23 +1,15 @@
-[
-  {
-    "sectionId": "Section 1",
-    "componentName": "Projects Carousel",
-    "authorableFields": [
-      { "name": "Section Title", "type": "Text" },
-      { "name": "Section Subtitle", "type": "Text" },
-      {
-        "name": "Projects",
-        "type": "Multifield",
-        "fields": [
-          { "name": "Project Image", "type": "Image" },
-          { "name": "Project Title", "type": "Text" },
-          { "name": "Project Location", "type": "Text" },
-          { "name": "Project Link", "type": "Link" }
-        ]
-      }
-    ],
-    "uiDescription": "A section with a title, subtitle, and a horizontal carousel displaying multiple project cards, each with an image, title, location, and optional link.",
-    "businessRequirements": "Editable title and subtitle, carousel navigation, dynamic number of projects, responsive, accessible, easy to author.",
-    "componentType": "Custom (Carousel)"
-  }
-]
+{
+  "componentName": "Projects Carousel",
+  "authorableFields": [
+    { "name": "Section Title", "type": "Text" },
+    { "name": "Section Subtitle", "type": "Text" },
+    { "name": "Projects", "type": "Multifield", "fields": [
+      { "name": "Image", "type": "Image" },
+      { "name": "Title", "type": "Text" },
+      { "name": "Location", "type": "Text" }
+    ]}
+  ],
+  "uiDescription": "A section with a large heading and subtitle above a horizontal carousel. The carousel displays project cards, each with an image, bold title, and location. Navigation arrows allow scrolling through the cards.",
+  "businessRequirements": "Editable section title and subtitle, support for multiple projects, carousel navigation, responsive layout, accessible controls, easy content authoring.",
+  "componentType": "Custom Component (Carousel)"
+}

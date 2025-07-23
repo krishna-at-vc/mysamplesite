@@ -18,6 +18,11 @@ mysamplesite
 
 # Additional Development Steps:
 - **Always generate an `index.html` file** for each new component in the frontend components directory. This file should allow local testing of the component without requiring an AEM environment.
-- **localHTMLFolder** Generated `index.html` location will be `ui.frontend/local-testing/<folder name>/<component-name>/index.html`
+- **localHTMLFolder** Generated `index.html` location will be `ui.frontend/src/main/webpack/static/<folder name>/<component-name>/index.html`
+- **Every `index.html` in the localHTMLFolder must include the following scripts and styles:**
+  - `/clientlib-base/css/base.css`
+  - `/clientlib-dependencies/css/dependencies.css`
+  - `/clientlib-dependencies/js/dependencies.js`
+  - `/clientlib-base/js/base.js`
 - **Ensure the HTML structure is identical** between the Sightly (HTL) template and the generated `index.html` test file. This guarantees consistency in appearance and behavior between local development and AEM deployment.
 
