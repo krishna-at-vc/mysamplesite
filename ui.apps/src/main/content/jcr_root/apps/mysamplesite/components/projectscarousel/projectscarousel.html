@@ -1,0 +1,17 @@
+<!-- Projects Carousel Component -->
+<div class="projects-carousel">
+  <h2 class="projects-carousel__title">${properties['sectionTitle'] @ context='text'}</h2>
+  <p class="projects-carousel__subtitle">${properties['sectionSubtitle'] @ context='text'}</p>
+  <div class="projects-carousel__list">
+    <sly data-sly-list.project="${properties['projects']}">
+      <div class="projects-carousel__card">
+        <img src="${project['projectImage']}" alt="${project['projectTitle']}" class="projects-carousel__image"/>
+        <div class="projects-carousel__card-content">
+          <h3 class="projects-carousel__card-title">${project['projectTitle']}</h3>
+          <p class="projects-carousel__card-location">${project['projectLocation']}</p>
+          <a data-sly-test="${project['projectLink']}" href="${project['projectLink']}" class="projects-carousel__card-link">Learn More</a>
+        </div>
+      </div>
+    </sly>
+  </div>
+</div> 

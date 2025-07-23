@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Projects Carousel Dialog"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+  <content jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
+    <items jcr:primaryType="nt:unstructured">
+      <sectionTitle jcr:primaryType="nt:unstructured"
+        fieldLabel="Section Title"
+        name="./sectionTitle"
+        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+      <sectionSubtitle jcr:primaryType="nt:unstructured"
+        fieldLabel="Section Subtitle"
+        name="./sectionSubtitle"
+        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+      <projects jcr:primaryType="nt:unstructured"
+        fieldLabel="Projects"
+        name="./projects"
+        sling:resourceType="granite/ui/components/coral/foundation/form/multifield">
+        <field jcr:primaryType="nt:unstructured"
+          sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+          <items jcr:primaryType="nt:unstructured">
+            <projectImage jcr:primaryType="nt:unstructured"
+              fieldLabel="Project Image"
+              name="./projectImage"
+              sling:resourceType="dam/gui/components/commons/fileupload"
+              allowUpload="true"/>
+            <projectTitle jcr:primaryType="nt:unstructured"
+              fieldLabel="Project Title"
+              name="./projectTitle"
+              sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+            <projectLocation jcr:primaryType="nt:unstructured"
+              fieldLabel="Project Location"
+              name="./projectLocation"
+              sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+            <projectLink jcr:primaryType="nt:unstructured"
+              fieldLabel="Project Link"
+              name="./projectLink"
+              sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"/>
+          </items>
+        </field>
+      </projects>
+    </items>
+  </content>
+</jcr:root> 

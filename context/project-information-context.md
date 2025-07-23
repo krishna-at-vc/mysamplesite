@@ -16,3 +16,8 @@ mysamplesite
 ├── ui.config (Environment specific config files to be created under this folder)
 ├── pom.xml (all the dependencies to be created under this folder)
 
+# Additional Development Steps:
+- **Always generate an `index.html` file** for each new component in the frontend components directory. This file should allow local testing of the component without requiring an AEM environment.
+- **localHTMLFolder** Generated `index.html` location will be `ui.frontend/local-testing/<folder name>/<component-name>/index.html`
+- **Ensure the HTML structure is identical** between the Sightly (HTL) template and the generated `index.html` test file. This guarantees consistency in appearance and behavior between local development and AEM deployment.
+
