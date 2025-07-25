@@ -1,4 +1,7 @@
 # ImportantConfigurations
+
+> **Note:** For all front-end code generation (HTML, CSS, JavaScript), you must follow the rules defined in [frontend-rules.md](./frontend-rules.md).
+
 ## use the following values when creating any component
 Project Name: mysamplesite
 Sling model package prefix in Java: com.mysamplesite.core.models
