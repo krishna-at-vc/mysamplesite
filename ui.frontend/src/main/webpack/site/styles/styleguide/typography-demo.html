@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CJ Design System - Typography Demo</title>
+    <link rel="stylesheet" href="../_typography.scss">
+    <style>
+        body {
+            font-family: 'Averta STD PE', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 40px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        .demo-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .demo-section {
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .demo-section:last-child {
+            border-bottom: none;
+        }
+        
+        .demo-title {
+            font-family: 'Malik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 30px;
+            color: #1a1a1a;
+        }
+        
+        .demo-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            background: #fafafa;
+            border-radius: 4px;
+        }
+        
+        .demo-label {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .demo-text {
+            margin: 0;
+        }
+        
+        .demo-code {
+            background: #f0f0f0;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+        
+        .responsive-demo {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .breakpoint {
+            text-align: center;
+            padding: 15px;
+            background: #e8f4fd;
+            border-radius: 4px;
+        }
+        
+        .breakpoint-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: #0066cc;
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .responsive-demo {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <h1 class="demo-title">CJ Design System - Typography Demo</h1>
+        
+        <!-- Display Typography -->
+        <div class="demo-section">
+            <h2 class="demo-title">Display Typography</h2>
+            <div class="demo-item">
+                <div class="demo-label">Display (cj-typography-display)</div>
+                <p class="demo-text cj-typography-display">Display Preview</p>
+                <div class="demo-code">class="cj-typography-display"</div>
+            </div>
+            
+            <div class="responsive-demo">
+                <div class="breakpoint">
+                    <div class="breakpoint-label">Desktop (1024px+)</div>
+                    <div style="font-family: 'Malik'; font-size: 48px; font-weight: 800; line-height: 56px;">48px</div>
+                </div>
+                <div class="breakpoint">
+                    <div class="breakpoint-label">Tablet (768px-1023px)</div>
+                    <div style="font-family: 'Malik'; font-size: 40px; font-weight: 800; line-height: 48px;">40px</div>
+                </div>
+                <div class="breakpoint">
+                    <div class="breakpoint-label">Mobile (320px-767px)</div>
+                    <div style="font-family: 'Malik'; font-size: 32px; font-weight: 800; line-height: 40px;">32px</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Heading Typography -->
+        <div class="demo-section">
+            <h2 class="demo-title">Heading Typography</h2>
+            
+            <div class="demo-item">
+                <div class="demo-label">Heading 1 (cj-typography-h1-heading)</div>
+                <p class="demo-text cj-typography-h1-heading">Heading 1 Preview</p>
+                <div class="demo-code">class="cj-typography-h1-heading"</div>
+            </div>
+            
+            <div class="demo-item">
+                <div class="demo-label">Heading 2 (cj-typography-h2-heading)</div>
+                <p class="demo-text cj-typography-h2-heading">Heading 2 Preview</p>
+                <div class="demo-code">class="cj-typography-h2-heading"</div>
+            </div>
+            
+            <div class="demo-item">
+                <div class="demo-label">Heading 3 (cj-typography-h3-heading)</div>
+                <p class="demo-text cj-typography-h3-heading">Heading 3 Preview</p>
+                <div class="demo-code">class="cj-typography-h3-heading"</div>
+            </div>
+            
+            <div class="demo-item">
+                <div class="demo-label">Heading 4 (cj-typography-h4-heading)</div>
+                <p class="demo-text cj-typography-h4-heading">Heading 4 Preview</p>
+                <div class="demo-code">class="cj-typography-h4-heading"</div>
+            </div>
+            
+            <div class="demo-item">
+                <div class="demo-label">Heading 5 (cj-typography-h5-heading)</div>
+                <p class="demo-text cj-typography-h5-heading">Heading 5 Preview</p>
+                <div class="demo-code">class="cj-typography-h5-heading"</div>
+            </div>
+        </div>
+        
+        <!-- Paragraph Typography -->
+        <div class="demo-section">
+            <h2 class="demo-title">Paragraph Typography</h2>
+            
+            <div class="demo-item">
+                <div class="demo-label">Paragraph 1 Body (cj-typography-p1-body)</div>
+                <p class="demo-text cj-typography-p1-body">Paragraph 1 Preview - This is the standard body text used across most pages. It provides excellent readability for articles, investor pages, and company information.</p>
+                <div class="demo-code">class="cj-typography-p1-body"</div>
+            </div>
+            
+            <div class="demo-item">
+                <div class="demo-label">Paragraph 1 Bold (cj-typography-p1-bold)</div>
+                <p class="demo-text cj-typography-p1-bold">Paragraph 1 Preview - This is the bold version of the standard body text used across most pages. It provides excellent readability for articles, investor pages, and company information.</p>
+                <div class="demo-code">class="cj-typography-p1-bold"</div>
+            </div>
+            
+            <div class="demo-item">
+                <div class="demo-label">Paragraph 2 Body (cj-typography-p2-body)</div>
+                <p class="demo-text cj-typography-p2-body">Paragraph 2 Preview - This is the smaller body text used for supporting content, captions, and secondary information throughout the site.</p>
+                <div class="demo-code">class="cj-typography-p2-body"</div>
+            </div>
+            
+            <div class="demo-item">
+                <div class="demo-label">Paragraph 2 Bold (cj-typography-p2-bold)</div>
+                <p class="demo-text cj-typography-p2-bold">Paragraph 2 Preview - This is the bold version of the smaller body text used for supporting content, captions, and secondary information.</p>
+                <div class="demo-code">class="cj-typography-p2-bold"</div>
+            </div>
+        </div>
+        
+        <!-- Interactive Typography -->
+        <div class="demo-section">
+            <h2 class="demo-title">Interactive Typography</h2>
+            
+            <div class="demo-item">
+                <div class="demo-label">Hyperlink (cj-typography-hyperlink)</div>
+                <p class="demo-text">
+                    This is a paragraph with a <a href="#" class="cj-typography-hyperlink">hyperlink</a> embedded within it. The link follows the hyperlink typography guidelines.
+                </p>
+                <div class="demo-code">class="cj-typography-hyperlink"</div>
+            </div>
+            
+            <div class="demo-item">
+                <div class="demo-label">Caption (cj-typography-caption)</div>
+                <p class="demo-text cj-typography-caption">Caption Preview - This is used for image captions, author bylines, dates, or source references.</p>
+                <div class="demo-code">class="cj-typography-caption"</div>
+            </div>
+        </div>
+        
+        <!-- Usage Examples -->
+        <div class="demo-section">
+            <h2 class="demo-title">Usage Examples</h2>
+            
+            <div class="demo-item">
+                <div class="demo-label">Hero Section Example</div>
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 60px 40px; border-radius: 8px; text-align: center;">
+                    <h1 class="cj-typography-display" style="color: white; margin-bottom: 20px;">Discover Our Business</h1>
+                    <p class="cj-typography-p1-body" style="color: white; max-width: 600px; margin: 0 auto;">This is a hero section example using the Display typography for the main headline and P1 Body for the supporting text.</p>
+                </div>
+            </div>
+            
+            <div class="demo-item">
+                <div class="demo-label">Article Example</div>
+                <article style="max-width: 800px;">
+                    <h1 class="cj-typography-h1-heading">Investor Relations</h1>
+                    <p class="cj-typography-p1-body">This is an example of how typography would be used in an article or content page. The main heading uses H1 typography, while the body text uses P1 Body typography.</p>
+                    
+                    <h2 class="cj-typography-h2-heading">Financial Performance</h2>
+                    <p class="cj-typography-p1-body">This subsection demonstrates the use of H2 typography for section headings within an article. The text continues to use P1 Body for optimal readability.</p>
+                    
+                    <h3 class="cj-typography-h3-heading">Quarterly Results</h3>
+                    <p class="cj-typography-p1-body">H3 typography is used for subsections, while maintaining the same body text style for consistency.</p>
+                    
+                    <p class="cj-typography-caption">Last updated: June 10, 2024</p>
+                </article>
+            </div>
+            
+            <div class="demo-item">
+                <div class="demo-label">Card Example</div>
+                <div style="border: 1px solid #ddd; border-radius: 8px; padding: 24px; max-width: 400px;">
+                    <h3 class="cj-typography-h3-heading">Product Title</h3>
+                    <p class="cj-typography-p1-body">This is an example of how typography would be used in a card component. The title uses H3 typography while the description uses P1 Body.</p>
+                    <a href="#" class="cj-typography-hyperlink">Learn More</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Implementation Notes -->
+        <div class="demo-section">
+            <h2 class="demo-title">Implementation Notes</h2>
+            
+            <div class="demo-item">
+                <div class="demo-label">Font Loading</div>
+                <p class="cj-typography-p1-body">To use this typography system, you'll need to load the Malik and Averta STD PE fonts. Add the following to your HTML head:</p>
+                <div class="demo-code">
+&lt;link href="https://fonts.googleapis.com/css2?family=Malik:wght@800&display=swap" rel="stylesheet"&gt;<br>
+&lt;link href="https://fonts.googleapis.com/css2?family=Averta+STD+PE:wght@400;600;700&display=swap" rel="stylesheet"&gt;
+                </div>
+            </div>
+            
+            <div class="demo-item">
+                <div class="demo-label">SCSS Import</div>
+                <p class="cj-typography-p1-body">Import the typography styles in your main SCSS file:</p>
+                <div class="demo-code">@import 'styles/styleguide/typography';</div>
+            </div>
+            
+            <div class="demo-item">
+                <div class="demo-label">Responsive Behavior</div>
+                <p class="cj-typography-p1-body">All typography classes automatically adjust for different screen sizes. The system uses mobile-first responsive design with breakpoints at 768px (tablet) and 1024px (desktop).</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

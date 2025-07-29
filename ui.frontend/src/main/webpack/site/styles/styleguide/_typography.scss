@@ -1,109 +1,630 @@
- // Typography Tokens
+/* CJ Design System - Typography SCSS Variables */
 
-// Display
-$font-display-family: 'Makk', sans-serif;
+// ==========================================================================
+// Font Families
+// ==========================================================================
+$font-family-malik: 'Malik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+$font-family-averta: 'Averta STD PE', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+// ==========================================================================
+// Font Weights
+// ==========================================================================
+$font-weight-regular: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+
+// ==========================================================================
+// Letter Spacing
+// ==========================================================================
+$letter-spacing-normal: 0;
+
+// ==========================================================================
+// Typography Tokens - Display
+// ==========================================================================
+$font-display-family: $font-family-malik;
+$font-display-weight: $font-weight-extrabold;
+$font-display-letter-spacing: $letter-spacing-normal;
+
+// Desktop
 $font-display-size-desktop: 48px;
-$font-display-size-tablet: 44px;
+$font-display-line-height-desktop: 56px;
+
+// Tablet
+$font-display-size-tablet: 40px;
+$font-display-line-height-tablet: 48px;
+
+// Mobile
 $font-display-size-mobile: 32px;
-$font-display-weight: 600;
-$font-display-letter-spacing: 0;
-$font-display-line-height: 56px;
+$font-display-line-height-mobile: 40px;
 
-// H1
-$font-h1-family: 'Makk', sans-serif;
-$font-h1-size-desktop: 44px;
-$font-h1-size-tablet: 36px;
+// ==========================================================================
+// Typography Tokens - Heading 1
+// ==========================================================================
+$font-h1-family: $font-family-malik;
+$font-h1-weight: $font-weight-extrabold;
+$font-h1-letter-spacing: $letter-spacing-normal;
+
+// Desktop
+$font-h1-size-desktop: 40px;
+$font-h1-line-height-desktop: 48px;
+
+// Tablet
+$font-h1-size-tablet: 32px;
+$font-h1-line-height-tablet: 40px;
+
+// Mobile
 $font-h1-size-mobile: 28px;
-$font-h1-weight: 600;
-$font-h1-letter-spacing: 0;
-$font-h1-line-height: 48px;
+$font-h1-line-height-mobile: 36px;
 
-// H2
-$font-h2-family: 'Makk', sans-serif;
-$font-h2-size-desktop: 36px;
+// ==========================================================================
+// Typography Tokens - Heading 2
+// ==========================================================================
+$font-h2-family: $font-family-malik;
+$font-h2-weight: $font-weight-extrabold;
+$font-h2-letter-spacing: $letter-spacing-normal;
+
+// Desktop
+$font-h2-size-desktop: 32px;
+$font-h2-line-height-desktop: 40px;
+
+// Tablet
 $font-h2-size-tablet: 28px;
+$font-h2-line-height-tablet: 36px;
+
+// Mobile
 $font-h2-size-mobile: 24px;
-$font-h2-weight: 600;
-$font-h2-letter-spacing: 0;
-$font-h2-line-height: 40px;
+$font-h2-line-height-mobile: 32px;
 
-// H3
-$font-h3-family: 'Makk', sans-serif;
+// ==========================================================================
+// Typography Tokens - Heading 3
+// ==========================================================================
+$font-h3-family: $font-family-malik;
+$font-h3-weight: $font-weight-extrabold;
+$font-h3-letter-spacing: $letter-spacing-normal;
+
+// Desktop
 $font-h3-size-desktop: 28px;
+$font-h3-line-height-desktop: 36px;
+
+// Tablet
 $font-h3-size-tablet: 24px;
+$font-h3-line-height-tablet: 32px;
+
+// Mobile
 $font-h3-size-mobile: 20px;
-$font-h3-weight: 600;
-$font-h3-letter-spacing: 0;
-$font-h3-line-height: 36px;
+$font-h3-line-height-mobile: 28px;
 
-// H4
-$font-h4-family: 'Aventa STD PE', sans-serif;
+// ==========================================================================
+// Typography Tokens - Heading 4
+// ==========================================================================
+$font-h4-family: $font-family-averta;
+$font-h4-weight: $font-weight-semibold;
+$font-h4-letter-spacing: $letter-spacing-normal;
+
+// Desktop
 $font-h4-size-desktop: 24px;
+$font-h4-line-height-desktop: 28px;
+
+// Tablet
 $font-h4-size-tablet: 20px;
-$font-h4-size-mobile: 16px;
-$font-h4-weight: 600;
-$font-h4-letter-spacing: 0;
-$font-h4-line-height: 28px;
+$font-h4-line-height-tablet: 26px;
 
-// H5
-$font-h5-family: 'Aventa STD PE', sans-serif;
+// Mobile
+$font-h4-size-mobile: 18px;
+$font-h4-line-height-mobile: 24px;
+
+// ==========================================================================
+// Typography Tokens - Heading 5
+// ==========================================================================
+$font-h5-family: $font-family-averta;
+$font-h5-weight: $font-weight-semibold;
+$font-h5-letter-spacing: $letter-spacing-normal;
+
+// Desktop
 $font-h5-size-desktop: 20px;
+$font-h5-line-height-desktop: 26px;
+
+// Tablet
 $font-h5-size-tablet: 18px;
+$font-h5-line-height-tablet: 24px;
+
+// Mobile
 $font-h5-size-mobile: 16px;
-$font-h5-weight: 600;
-$font-h5-letter-spacing: 0;
-$font-h5-line-height: 24px;
+$font-h5-line-height-mobile: 20px;
 
-// P1 (Paragraph 1)
-$font-p1-family: 'Aventa STD PE', sans-serif;
-$font-p1-size-desktop: 18px;
-$font-p1-size-tablet: 18px;
-$font-p1-size-mobile: 16px;
-$font-p1-weight: 400;
-$font-p1-letter-spacing: 0;
-$font-p1-line-height: 24px;
+// ==========================================================================
+// Typography Tokens - Paragraph 1 Body
+// ==========================================================================
+$font-p1-body-family: $font-family-averta;
+$font-p1-body-weight: $font-weight-regular;
+$font-p1-body-letter-spacing: $letter-spacing-normal;
 
-// P1 Bold
-$font-p1-bold-family: 'Aventa STD PE', sans-serif;
-$font-p1-bold-size-desktop: 18px;
-$font-p1-bold-size-tablet: 18px;
-$font-p1-bold-size-mobile: 16px;
-$font-p1-bold-weight: 700;
-$font-p1-bold-letter-spacing: 0;
-$font-p1-bold-line-height: 24px;
+// Desktop
+$font-p1-body-size-desktop: 16px;
+$font-p1-body-line-height-desktop: 24px;
 
-// P2 (Paragraph 2)
-$font-p2-family: 'Aventa STD PE', sans-serif;
-$font-p2-size-desktop: 16px;
-$font-p2-size-tablet: 16px;
-$font-p2-size-mobile: 14px;
-$font-p2-weight: 400;
-$font-p2-letter-spacing: 0;
-$font-p2-line-height: 20px;
+// Tablet
+$font-p1-body-size-tablet: 16px;
+$font-p1-body-line-height-tablet: 24px;
 
-// P2 Bold
-$font-p2-bold-family: 'Aventa STD PE', sans-serif;
-$font-p2-bold-size-desktop: 16px;
-$font-p2-bold-size-tablet: 16px;
+// Mobile
+$font-p1-body-size-mobile: 14px;
+$font-p1-body-line-height-mobile: 20px;
+
+// ==========================================================================
+// Typography Tokens - Paragraph 1 Bold
+// ==========================================================================
+$font-p1-bold-family: $font-family-averta;
+$font-p1-bold-weight: $font-weight-bold;
+$font-p1-bold-letter-spacing: $letter-spacing-normal;
+
+// Desktop
+$font-p1-bold-size-desktop: 16px;
+$font-p1-bold-line-height-desktop: 24px;
+
+// Tablet
+$font-p1-bold-size-tablet: 16px;
+$font-p1-bold-line-height-tablet: 24px;
+
+// Mobile
+$font-p1-bold-size-mobile: 14px;
+$font-p1-bold-line-height-mobile: 20px;
+
+// ==========================================================================
+// Typography Tokens - Paragraph 2 Body
+// ==========================================================================
+$font-p2-body-family: $font-family-averta;
+$font-p2-body-weight: $font-weight-regular;
+$font-p2-body-letter-spacing: $letter-spacing-normal;
+
+// Desktop
+$font-p2-body-size-desktop: 14px;
+$font-p2-body-line-height-desktop: 20px;
+
+// Tablet
+$font-p2-body-size-tablet: 14px;
+$font-p2-body-line-height-tablet: 20px;
+
+// Mobile
+$font-p2-body-size-mobile: 14px;
+$font-p2-body-line-height-mobile: 20px;
+
+// ==========================================================================
+// Typography Tokens - Paragraph 2 Bold
+// ==========================================================================
+$font-p2-bold-family: $font-family-averta;
+$font-p2-bold-weight: $font-weight-bold;
+$font-p2-bold-letter-spacing: $letter-spacing-normal;
+
+// Desktop
+$font-p2-bold-size-desktop: 14px;
+$font-p2-bold-line-height-desktop: 20px;
+
+// Tablet
+$font-p2-bold-size-tablet: 14px;
+$font-p2-bold-line-height-tablet: 20px;
+
+// Mobile
 $font-p2-bold-size-mobile: 14px;
-$font-p2-bold-weight: 700;
-$font-p2-bold-letter-spacing: 0;
-$font-p2-bold-line-height: 20px;
+$font-p2-bold-line-height-mobile: 20px;
 
-// Hyperlink
-$font-hyperlink-family: 'Aventa STD PE', sans-serif;
-$font-hyperlink-size-desktop: 16px;
-$font-hyperlink-size-tablet: 16px;
+// ==========================================================================
+// Typography Tokens - Hyperlink
+// ==========================================================================
+$font-hyperlink-family: $font-family-averta;
+$font-hyperlink-weight: $font-weight-regular;
+$font-hyperlink-letter-spacing: $letter-spacing-normal;
+$font-hyperlink-text-decoration: underline;
+
+// Desktop
+$font-hyperlink-size-desktop: 14px;
+$font-hyperlink-line-height-desktop: 20px;
+
+// Tablet
+$font-hyperlink-size-tablet: 14px;
+$font-hyperlink-line-height-tablet: 20px;
+
+// Mobile
 $font-hyperlink-size-mobile: 14px;
-$font-hyperlink-weight: 400;
-$font-hyperlink-letter-spacing: 0;
-$font-hyperlink-line-height: 20px;
+$font-hyperlink-line-height-mobile: 20px;
 
-// Caption
-$font-caption-family: 'Aventa STD PE', sans-serif;
-$font-caption-size-desktop: 14px;
-$font-caption-size-tablet: 14px;
-$font-caption-size-mobile: 12px;
-$font-caption-weight: 400;
-$font-caption-letter-spacing: 0;
-$font-caption-line-height: 16px;
+// ==========================================================================
+// Typography Tokens - Caption
+// ==========================================================================
+$font-caption-family: $font-family-averta;
+$font-caption-weight: $font-weight-regular;
+$font-caption-letter-spacing: $letter-spacing-normal;
+
+// Desktop
+$font-caption-size-desktop: 13px;
+$font-caption-line-height-desktop: 16px;
+
+// Tablet
+$font-caption-size-tablet: 13px;
+$font-caption-line-height-tablet: 16px;
+
+// Mobile
+$font-caption-size-mobile: 13px;
+$font-caption-line-height-mobile: 16px;
+
+// ==========================================================================
+// Typography Mixins for Easy Usage
+// ==========================================================================
+
+// Display Typography Mixin
+@mixin typography-display($breakpoint: 'desktop') {
+  font-family: $font-display-family;
+  font-weight: $font-display-weight;
+  letter-spacing: $font-display-letter-spacing;
+  
+  @if $breakpoint == 'desktop' {
+    font-size: $font-display-size-desktop;
+    line-height: $font-display-line-height-desktop;
+  } @else if $breakpoint == 'tablet' {
+    font-size: $font-display-size-tablet;
+    line-height: $font-display-line-height-tablet;
+  } @else if $breakpoint == 'mobile' {
+    font-size: $font-display-size-mobile;
+    line-height: $font-display-line-height-mobile;
+  }
+}
+
+// Heading 1 Typography Mixin
+@mixin typography-h1($breakpoint: 'desktop') {
+  font-family: $font-h1-family;
+  font-weight: $font-h1-weight;
+  letter-spacing: $font-h1-letter-spacing;
+  
+  @if $breakpoint == 'desktop' {
+    font-size: $font-h1-size-desktop;
+    line-height: $font-h1-line-height-desktop;
+  } @else if $breakpoint == 'tablet' {
+    font-size: $font-h1-size-tablet;
+    line-height: $font-h1-line-height-tablet;
+  } @else if $breakpoint == 'mobile' {
+    font-size: $font-h1-size-mobile;
+    line-height: $font-h1-line-height-mobile;
+  }
+}
+
+// Heading 2 Typography Mixin
+@mixin typography-h2($breakpoint: 'desktop') {
+  font-family: $font-h2-family;
+  font-weight: $font-h2-weight;
+  letter-spacing: $font-h2-letter-spacing;
+  
+  @if $breakpoint == 'desktop' {
+    font-size: $font-h2-size-desktop;
+    line-height: $font-h2-line-height-desktop;
+  } @else if $breakpoint == 'tablet' {
+    font-size: $font-h2-size-tablet;
+    line-height: $font-h2-line-height-tablet;
+  } @else if $breakpoint == 'mobile' {
+    font-size: $font-h2-size-mobile;
+    line-height: $font-h2-line-height-mobile;
+  }
+}
+
+// Heading 3 Typography Mixin
+@mixin typography-h3($breakpoint: 'desktop') {
+  font-family: $font-h3-family;
+  font-weight: $font-h3-weight;
+  letter-spacing: $font-h3-letter-spacing;
+  
+  @if $breakpoint == 'desktop' {
+    font-size: $font-h3-size-desktop;
+    line-height: $font-h3-line-height-desktop;
+  } @else if $breakpoint == 'tablet' {
+    font-size: $font-h3-size-tablet;
+    line-height: $font-h3-line-height-tablet;
+  } @else if $breakpoint == 'mobile' {
+    font-size: $font-h3-size-mobile;
+    line-height: $font-h3-line-height-mobile;
+  }
+}
+
+// Heading 4 Typography Mixin
+@mixin typography-h4($breakpoint: 'desktop') {
+  font-family: $font-h4-family;
+  font-weight: $font-h4-weight;
+  letter-spacing: $font-h4-letter-spacing;
+  
+  @if $breakpoint == 'desktop' {
+    font-size: $font-h4-size-desktop;
+    line-height: $font-h4-line-height-desktop;
+  } @else if $breakpoint == 'tablet' {
+    font-size: $font-h4-size-tablet;
+    line-height: $font-h4-line-height-tablet;
+  } @else if $breakpoint == 'mobile' {
+    font-size: $font-h4-size-mobile;
+    line-height: $font-h4-line-height-mobile;
+  }
+}
+
+// Heading 5 Typography Mixin
+@mixin typography-h5($breakpoint: 'desktop') {
+  font-family: $font-h5-family;
+  font-weight: $font-h5-weight;
+  letter-spacing: $font-h5-letter-spacing;
+  
+  @if $breakpoint == 'desktop' {
+    font-size: $font-h5-size-desktop;
+    line-height: $font-h5-line-height-desktop;
+  } @else if $breakpoint == 'tablet' {
+    font-size: $font-h5-size-tablet;
+    line-height: $font-h5-line-height-tablet;
+  } @else if $breakpoint == 'mobile' {
+    font-size: $font-h5-size-mobile;
+    line-height: $font-h5-line-height-mobile;
+  }
+}
+
+// Paragraph 1 Body Typography Mixin
+@mixin typography-p1-body($breakpoint: 'desktop') {
+  font-family: $font-p1-body-family;
+  font-weight: $font-p1-body-weight;
+  letter-spacing: $font-p1-body-letter-spacing;
+  
+  @if $breakpoint == 'desktop' {
+    font-size: $font-p1-body-size-desktop;
+    line-height: $font-p1-body-line-height-desktop;
+  } @else if $breakpoint == 'tablet' {
+    font-size: $font-p1-body-size-tablet;
+    line-height: $font-p1-body-line-height-tablet;
+  } @else if $breakpoint == 'mobile' {
+    font-size: $font-p1-body-size-mobile;
+    line-height: $font-p1-body-line-height-mobile;
+  }
+}
+
+// Paragraph 1 Bold Typography Mixin
+@mixin typography-p1-bold($breakpoint: 'desktop') {
+  font-family: $font-p1-bold-family;
+  font-weight: $font-p1-bold-weight;
+  letter-spacing: $font-p1-bold-letter-spacing;
+  
+  @if $breakpoint == 'desktop' {
+    font-size: $font-p1-bold-size-desktop;
+    line-height: $font-p1-bold-line-height-desktop;
+  } @else if $breakpoint == 'tablet' {
+    font-size: $font-p1-bold-size-tablet;
+    line-height: $font-p1-bold-line-height-tablet;
+  } @else if $breakpoint == 'mobile' {
+    font-size: $font-p1-bold-size-mobile;
+    line-height: $font-p1-bold-line-height-mobile;
+  }
+}
+
+// Paragraph 2 Body Typography Mixin
+@mixin typography-p2-body($breakpoint: 'desktop') {
+  font-family: $font-p2-body-family;
+  font-weight: $font-p2-body-weight;
+  letter-spacing: $font-p2-body-letter-spacing;
+  
+  @if $breakpoint == 'desktop' {
+    font-size: $font-p2-body-size-desktop;
+    line-height: $font-p2-body-line-height-desktop;
+  } @else if $breakpoint == 'tablet' {
+    font-size: $font-p2-body-size-tablet;
+    line-height: $font-p2-body-line-height-tablet;
+  } @else if $breakpoint == 'mobile' {
+    font-size: $font-p2-body-size-mobile;
+    line-height: $font-p2-body-line-height-mobile;
+  }
+}
+
+// Paragraph 2 Bold Typography Mixin
+@mixin typography-p2-bold($breakpoint: 'desktop') {
+  font-family: $font-p2-bold-family;
+  font-weight: $font-p2-bold-weight;
+  letter-spacing: $font-p2-bold-letter-spacing;
+  
+  @if $breakpoint == 'desktop' {
+    font-size: $font-p2-bold-size-desktop;
+    line-height: $font-p2-bold-line-height-desktop;
+  } @else if $breakpoint == 'tablet' {
+    font-size: $font-p2-bold-size-tablet;
+    line-height: $font-p2-bold-line-height-tablet;
+  } @else if $breakpoint == 'mobile' {
+    font-size: $font-p2-bold-size-mobile;
+    line-height: $font-p2-bold-line-height-mobile;
+  }
+}
+
+// Hyperlink Typography Mixin
+@mixin typography-hyperlink($breakpoint: 'desktop') {
+  font-family: $font-hyperlink-family;
+  font-weight: $font-hyperlink-weight;
+  letter-spacing: $font-hyperlink-letter-spacing;
+  text-decoration: $font-hyperlink-text-decoration;
+  
+  @if $breakpoint == 'desktop' {
+    font-size: $font-hyperlink-size-desktop;
+    line-height: $font-hyperlink-line-height-desktop;
+  } @else if $breakpoint == 'tablet' {
+    font-size: $font-hyperlink-size-tablet;
+    line-height: $font-hyperlink-line-height-tablet;
+  } @else if $breakpoint == 'mobile' {
+    font-size: $font-hyperlink-size-mobile;
+    line-height: $font-hyperlink-line-height-mobile;
+  }
+}
+
+// Caption Typography Mixin
+@mixin typography-caption($breakpoint: 'desktop') {
+  font-family: $font-caption-family;
+  font-weight: $font-caption-weight;
+  letter-spacing: $font-caption-letter-spacing;
+  
+  @if $breakpoint == 'desktop' {
+    font-size: $font-caption-size-desktop;
+    line-height: $font-caption-line-height-desktop;
+  } @else if $breakpoint == 'tablet' {
+    font-size: $font-caption-size-tablet;
+    line-height: $font-caption-line-height-tablet;
+  } @else if $breakpoint == 'mobile' {
+    font-size: $font-caption-size-mobile;
+    line-height: $font-caption-line-height-mobile;
+  }
+}
+
+// ==========================================================================
+// Responsive Typography Classes
+// ==========================================================================
+
+// Display Typography Classes
+.cj-typography-display {
+  @include typography-display('mobile');
+  
+  @media (min-width: 768px) {
+    @include typography-display('tablet');
+  }
+  
+  @media (min-width: 1024px) {
+    @include typography-display('desktop');
+  }
+}
+
+// Heading 1 Typography Classes
+.cj-typography-h1-heading {
+  @include typography-h1('mobile');
+  
+  @media (min-width: 768px) {
+    @include typography-h1('tablet');
+  }
+  
+  @media (min-width: 1024px) {
+    @include typography-h1('desktop');
+  }
+}
+
+// Heading 2 Typography Classes
+.cj-typography-h2-heading {
+  @include typography-h2('mobile');
+  
+  @media (min-width: 768px) {
+    @include typography-h2('tablet');
+  }
+  
+  @media (min-width: 1024px) {
+    @include typography-h2('desktop');
+  }
+}
+
+// Heading 3 Typography Classes
+.cj-typography-h3-heading {
+  @include typography-h3('mobile');
+  
+  @media (min-width: 768px) {
+    @include typography-h3('tablet');
+  }
+  
+  @media (min-width: 1024px) {
+    @include typography-h3('desktop');
+  }
+}
+
+// Heading 4 Typography Classes
+.cj-typography-h4-heading {
+  @include typography-h4('mobile');
+  
+  @media (min-width: 768px) {
+    @include typography-h4('tablet');
+  }
+  
+  @media (min-width: 1024px) {
+    @include typography-h4('desktop');
+  }
+}
+
+// Heading 5 Typography Classes
+.cj-typography-h5-heading {
+  @include typography-h5('mobile');
+  
+  @media (min-width: 768px) {
+    @include typography-h5('tablet');
+  }
+  
+  @media (min-width: 1024px) {
+    @include typography-h5('desktop');
+  }
+}
+
+// Paragraph 1 Body Typography Classes
+.cj-typography-p1-body {
+  @include typography-p1-body('mobile');
+  
+  @media (min-width: 768px) {
+    @include typography-p1-body('tablet');
+  }
+  
+  @media (min-width: 1024px) {
+    @include typography-p1-body('desktop');
+  }
+}
+
+// Paragraph 1 Bold Typography Classes
+.cj-typography-p1-bold {
+  @include typography-p1-bold('mobile');
+  
+  @media (min-width: 768px) {
+    @include typography-p1-bold('tablet');
+  }
+  
+  @media (min-width: 1024px) {
+    @include typography-p1-bold('desktop');
+  }
+}
+
+// Paragraph 2 Body Typography Classes
+.cj-typography-p2-body {
+  @include typography-p2-body('mobile');
+  
+  @media (min-width: 768px) {
+    @include typography-p2-body('tablet');
+  }
+  
+  @media (min-width: 1024px) {
+    @include typography-p2-body('desktop');
+  }
+}
+
+// Paragraph 2 Bold Typography Classes
+.cj-typography-p2-bold {
+  @include typography-p2-bold('mobile');
+  
+  @media (min-width: 768px) {
+    @include typography-p2-bold('tablet');
+  }
+  
+  @media (min-width: 1024px) {
+    @include typography-p2-bold('desktop');
+  }
+}
+
+// Hyperlink Typography Classes
+.cj-typography-hyperlink {
+  @include typography-hyperlink('mobile');
+  
+  @media (min-width: 768px) {
+    @include typography-hyperlink('tablet');
+  }
+  
+  @media (min-width: 1024px) {
+    @include typography-hyperlink('desktop');
+  }
+}
+
+// Caption Typography Classes
+.cj-typography-caption {
+  @include typography-caption('mobile');
+  
+  @media (min-width: 768px) {
+    @include typography-caption('tablet');
+  }
+  
+  @media (min-width: 1024px) {
+    @include typography-caption('desktop');
+  }
+} 

@@ -22,6 +22,10 @@ At any time, you can type **`options`** to view the available options.
 - **Description:**  
   Analyze a provided image of a web page to extract design tokens (such as colors, typography, spacing, etc.) and generate a style guide. The style guide should be implemented using the project's mysamplesite/ui.frontend/src/main/webpack/site structure and placed in the appropriate folder.
 
+### **Option 4: Export Figma to PNG**
+- **Description:**  
+  Export Figma designs to PNG format for use in design analysis or component development.
+
 ---
 
 ## **Step-by-Step Workflow**
@@ -34,6 +38,8 @@ At any time, you can type **`options`** to view the available options.
 2. **Select an Option:**
    - **Type `1`** to choose **Identify Components**.
    - **Type `2`** to choose **Develop Components**.
+   - **Type `3`** to choose **Prepare StyleGuide**.
+   - **Type `4`** to choose **Process Figma Designs**.
 
 ---
 
@@ -132,18 +138,33 @@ At any time, you can type **`options`** to view the available options.
 #### **Step 3.1: Provide the Image**
 
 - **Instruction:**  
-  Share the image of the web page or design from which the style guide should be prepared.
+  Share the image of the web page or component from which the style guide should be prepared.
 
 - **Example:**  
   Please upload or provide a link to the image.
 
-#### **Step 3.2: Analyze the Image**
+#### **Step 3.2: Analyze the Figma/Image**
 
 - **Process:**
-  1. **Extract Design Tokens:**  
-     Identify and extract key design tokens such as colors, typography (fonts, sizes, weights), spacing (margins, paddings), and other reusable style elements from the image.
-  2. **Document Tokens:**  
-     Organize the extracted tokens into categories (e.g., color palette, font styles, spacing scale).
+  1. **Analyze Available Design Tokens:**  
+     First, analyze the image to identify what design tokens are available for extraction:
+     - **Colors:** Check if color information is visible and extractable from the image
+     - **Typography:** Check if text/font information is visible and extractable from the image
+     - **Spacing:** Check if spacing, margins, or padding information is visible and extractable from the image
+     - **Other Elements:** Check for any other reusable style elements (borders, shadows, etc.)
+  
+  2. **Prompt Available Tokens:**  
+     Before extraction, clearly state what design tokens are available in the image and can be extracted.
+  
+  3. **Extract Available Tokens:**  
+     Only extract the design tokens that are actually present and identifiable in the image:
+     - If colors exist → extract color palette
+     - If typography exists → extract font styles, sizes, weights
+     - If spacing exists → extract spacing scale, margins, paddings
+     - If other elements exist → extract those specific elements
+  
+  4. **Document Tokens:**  
+     Organize the extracted tokens into categories (e.g., color palette, font styles, spacing scale) based on what was actually found in the image.
 
 #### **Step 3.3: Generate Style Guide Files**
 
@@ -163,6 +184,36 @@ At any time, you can type **`options`** to view the available options.
 
 ---
 
+### **Option 4: Export Figma to PNG**
+
+#### **Step 4.1: Provide Figma Design**
+
+- **Instruction:**  
+  Share the Figma design URL that needs to be downloaded/screenshot to PNG format.
+
+- **Example:**  
+  Please provide the Figma URL.
+
+#### **Step 4.2: Convert Figma to PNG**
+
+- **Process:**
+  1. **Access Figma Design:**  
+     Navigate to the provided Figma design using browser automation.
+  2. **Download to PNG:**  
+     Convert the Figma design to PNG format using browser automation tools.
+  3. **Save PNG:**  
+     Download file with descriptive filename.
+
+#### **Step 4.3: Save and Organize**
+
+- **Instruction:**  
+  - Save the PNG in Download location with a descriptive filename using browser default behaviour
+  - Ensure the file is properly organized and accessible for future reference
+  - Once file downloaded, copy file from Download folder and paste it in `mysamplesite/context/styleguide`
+  - Once Successful follow Option 3 to create a styleguide with provided files
+
+---
+
 ### **Next Steps**
 
 1. **Identify Components:**
@@ -173,8 +224,16 @@ At any time, you can type **`options`** to view the available options.
    - If you choose to develop components, follow the steps under **Option 2**.
    - Ensure you have the necessary component details from the identification step.
 
-3. **Review and Test:**
-   - After generating the component code, review it for accuracy and completeness.
+3. **Prepare Style Guide:**
+   - If you choose to prepare a style guide, follow the steps under **Option 3**.
+   - This will help establish design consistency across your components.
+
+4. **Process Figma Designs:**
+   - If you choose to process Figma designs, follow the steps under **Option 4**.
+   - This will convert Figma designs to PNG and extract design tokens for your style guide.
+
+5. **Review and Test:**
+   - After generating the component code or style guide, review it for accuracy and completeness.
    - Test the component in your AEM environment to ensure it functions as expected.
 
 ---
