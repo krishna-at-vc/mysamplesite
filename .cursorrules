@@ -4,11 +4,9 @@ Welcome to the **AEM Component Development Workflow** tailored for **Cursor Comp
 
 ## **Available Options**
 
-At any time, you can type **`options`** to view the available options.
+At any time, you can type **`options`** to view the available options. This will automatically run the context setup first, then display the available options.
 
-### **Option 0: Context Setup**
-- **Description:**  
-  Scan the complete codebase and use the context/project-information-context.md file to setup the context for the project.  You will be required these information to generate the code at the proper location.
+**Context Setup:** Scan the complete codebase and use the context/project-information-context.md file to setup the context for the project. You will be required these information to generate the code at the proper location. If you already have the context setup and the file is not updated, don't run the context setup and mention that you already have the context with the last updated file.
 
 ### **Option 1: Identify Components**
 - **Description:**  
@@ -16,7 +14,7 @@ At any time, you can type **`options`** to view the available options.
 
 ### **Option 2: Develop Components**
 - **Description:**  
-  Generate AEM component code based on previously identified components. This includes selecting the business logic language (JavaScript or Java) and creating the necessary code files.
+  Generate AEM component code based on previously identified components. This includes creating the necessary code files with Java business logic implementation.
 
 ### **Option 3: Prepare StyleGuide**
 - **Description:**  
@@ -102,15 +100,13 @@ At any time, you can type **`options`** to view the available options.
 - **Example:**  
   Please select the component you want to develop (e.g., Hero Banner).
 
-#### **Step 2.2: Select Business Logic Language**
+#### **Step 2.2: Business Logic Language**
 
 - **Instruction:**  
-  Select the language for the business logic of the component. You have two options:
-  - **JavaScript (JS)**
-  - **Java**
+  The business logic language for the component will be **Java**.
 
-- **Example:**  
-  Please select the language for the business logic (JS or Java).
+- **Note:**  
+  All component business logic will be implemented using Java for consistency with the AEM backend architecture.
 
 #### **Step 2.3: Generate Component Code**
 
