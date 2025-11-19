@@ -1,0 +1,18 @@
+{
+  "alloworigin": ["http://localhost:4508"],
+  "allowedpaths": [".*"],
+  "supportedheaders": [
+    "Authorization",
+    "Origin",
+    "Accept",
+    "X-Requested-With",
+    "Content-Type",
+    "Access-Control-Request-Method",
+    "Access-Control-Request-Headers",
+    "*"
+  ],
+  "exposedheaders":[
+    "*"
+  ],
+  "supportedmethods": ["GET","HEAD","OPTIONS","POST"]
+}
