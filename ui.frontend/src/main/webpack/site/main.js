@@ -1,12 +1,11 @@
 // Import global styles and scripts
 import './main.scss';
-import './util.js';
 
 // Import components using require.context
 try {
     const componentContext = require.context(
         // Starting from site folder, go up one level and into components
-        '../../components',
+        '../components',
         // Search subdirectories
         true,
         // Only include JavaScript files

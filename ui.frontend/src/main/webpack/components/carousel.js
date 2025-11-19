@@ -124,4 +124,4 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch (error) {
         console.error('Error initializing carousels:', error);
     }
-}); 
+});
