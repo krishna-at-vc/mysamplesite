@@ -8,13 +8,12 @@
     "X-Requested-With",
     "Content-Type",
     "Access-Control-Request-Method",
-    "Access-Control-Request-Headers",
-    "*"
+    "Access-Control-Request-Headers"
   ],
   "exposedheaders":[
     "Content-Length",
-    "Content-Type",
-    "*"
+    "Content-Disposition",
+    "Content-Type"
   ],
   "supportedmethods": ["GET","HEAD","OPTIONS"],
   "supportscredentials": true
