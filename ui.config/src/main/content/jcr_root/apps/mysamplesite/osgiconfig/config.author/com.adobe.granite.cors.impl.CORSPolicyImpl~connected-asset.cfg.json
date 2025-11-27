@@ -1,7 +1,7 @@
 {
   "alloworigin": ["https://author-p65771-e1816176.adobeaemcloud.com","https://author-p35060-e1062241.adobeaemcloud.com", "https://author-p65771-e1854967.adobeaemcloud.com"],
-  "allowedpaths": [".*"],
-  "supportedheaders": [
+  "allowedpaths": ["^/content/dam(/.*)?$"],
+  "supportedheaders": [ 
     "Authorization",
     "Origin",
     "Accept",
