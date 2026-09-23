@@ -10,6 +10,6 @@
     "Access-Control-Request-Method",
     "Access-Control-Request-Headers"
   ],
-  "supportedmethods": ["GET","HEAD","POST"],
+  "supportedmethods": ["GET","HEAD"],
   "alloworiginregexp": []
 }
