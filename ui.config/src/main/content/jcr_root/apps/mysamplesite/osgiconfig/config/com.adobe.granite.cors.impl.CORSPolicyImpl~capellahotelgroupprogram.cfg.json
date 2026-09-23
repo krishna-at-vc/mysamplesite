@@ -1,0 +1,15 @@
+{
+  "alloworigin": ["http://localhost:3000", "https://author-p35060-e2270128.adobeaemcloud.com", "https://main--capella-hotels--wpp-public.aem.page","https://main--capella-hotels--wpp-public.aem.live"],
+  "allowedpaths": ["*"],
+  "supportedheaders": [
+    "Authorization",
+    "Origin",
+    "Accept",
+    "X-Requested-With",
+    "Content-Type",
+    "Access-Control-Request-Method",
+    "Access-Control-Request-Headers"
+  ],
+  "supportedmethods": ["GET","HEAD","POST"],
+  "alloworiginregexp": []
+}
