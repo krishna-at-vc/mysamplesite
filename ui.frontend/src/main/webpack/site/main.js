@@ -1,6 +1,5 @@
 // Import global styles and scripts
 import './main.scss';
-import './util.js';
 
 // Import components using require.context
 try {
